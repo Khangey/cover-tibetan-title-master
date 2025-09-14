@@ -1,0 +1,77 @@
+@layer tailwind-base, antd;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+
+/* 定义藏文字体 */
+@font-face {
+  font-family: 'FZZWXBTOT_Uni';
+  src: url('/fonts/FZZWXBTOT_Uni.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 为藏文设置字体 */
+html[lang="bo"] body {
+  font-family: 'FZZWXBTOT_Uni', sans-serif !important;
+}
+
+/* 确保藏文字体在所有元素上生效 */
+html[lang="bo"] * {
+  font-family: 'FZZWXBTOT_Uni', sans-serif !important;
+}
+
+/* Devicon图标样式 */
+.dev-icon {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/*body {*/
+/*  !*TODO 暗黑主题*!*/
+/*  background-color: #f0f5fa;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  margin: 0;*/
+/*  font-family: "Quicksand", sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+/*覆盖 ant formitem 的 marginBottom*/
+.ant-form-item {
+  margin-bottom: 12px !important;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.ant-popconfirm .ant-popconfirm-buttons {
+  text-align: end;
+  white-space: nowrap;
+}
+.ant-popconfirm .ant-popconfirm-message {
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+}
+
+/*.ant-popover .ant-popover-inner-content {*/
+/*  color: var(--ant-color-text);*/
+/*  padding: var(--ant-popover-inner-content-padding);*/
+/*}*/
+
+.ant-popconfirm .ant-popconfirm-message >.ant-popconfirm-message-icon .anticon {
+  line-height: 2;
+  margin-inline-end: 8px;
+}
+
+.ant-popconfirm .ant-popconfirm-buttons button {
+  margin-inline-start: 8px;
+}
